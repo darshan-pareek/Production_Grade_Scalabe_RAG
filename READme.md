@@ -13,3 +13,7 @@ Raw data (different type like pdf docs html txt ) -> Parser(get one type of data
 
 #### APP 
 it contain config file where we connect all the apis to .env  ie setting up things to use
+
+now in APP we have loader and chunking folder  
+loader load all differren kind of the data 4 files for 4 datatype load
+chunker  is use for chunking the parse data.
