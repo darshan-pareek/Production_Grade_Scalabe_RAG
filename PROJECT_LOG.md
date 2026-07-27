@@ -11,3 +11,9 @@ ADD the config setup
 
 ## JULY 27: 19:17
 ADD the embedding model
+
+## JULY 27 : 20:15
+ADD the chunker
+
+## JULY 28 : 01:15
+Created the Complete injection pipeline

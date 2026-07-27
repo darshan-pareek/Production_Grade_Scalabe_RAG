@@ -5,6 +5,7 @@ import logfire # for observability and logging
 
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
+
 from APP.config import setting # all api info are here
 
 BATCH_SIZE= 50 
@@ -21,7 +22,7 @@ def _probe_gemini(): # health func check if gemini able to convert embedidng by 
     try:
         model=GoogleGenerativeAIEmbeddings(
             model="models/gemini-embedding-2-preview",
-            google_api_key=settings.GEMINI_API_KEY,
+            google_api_key=setting.GEMINI_API_KEY,
         )
         model.embed_query("probability") # giving single word to check the emedding working or not
         # embed_query take single word
