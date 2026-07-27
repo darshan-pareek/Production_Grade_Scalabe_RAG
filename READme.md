@@ -17,3 +17,22 @@ it contain config file where we connect all the apis to .env  ie setting up thin
 now in APP we have loader and chunking folder  
 loader load all differren kind of the data 4 files for 4 datatype load
 chunker  is use for chunking the parse data.
+
+
+## APP\Services\Retrival\embeddings.py
+This file is converting the chunks into embeddings
+The main embedding model is gemini if it fail using a fallback model
+Total 5 function in it
+prob_gemini() => hralth function to check model can embed a text
+load_fallback()=> loading fallback model when gemini fail for 4 times
+init() =>  to  intialze global variable
+get_embedding_dim () => dinamic selescting the size of emb
+embed_batch() => embed the documents by batch it recievig
+embed_query() = > converting user query ie retrival
+embed_text() => storing the all embedidng in list[list[float]] and converting embedding of 50 batch
+ie 50 documents convert to embedding at a time.
+
+## APP\Ingestion\Chunking\splitter.py
+This file convert paragraph or text in chunks where chunksize is 1500 
+1 function 
+chunk_text
