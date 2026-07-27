@@ -1,3 +1,7 @@
 myenv/
 .env
 learning.txt
+
+test.py
+
+processed_data

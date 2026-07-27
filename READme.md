@@ -36,3 +36,14 @@ ie 50 documents convert to embedding at a time.
 This file convert paragraph or text in chunks where chunksize is 1500 
 1 function 
 chunk_text
+
+
+##  APP\Ingestion\processor.py
+whole injection pipeline is build in this
+setup  the qdrant client ie vector db
+
+4 functions
+1. save process locally => store store info locally
+2. process file =>   parse -> chunk -> save_laclly -> embedd ->  index in Qdrant
+3. process directory => to load the folders
+4. run universal injection => for cli running the file
