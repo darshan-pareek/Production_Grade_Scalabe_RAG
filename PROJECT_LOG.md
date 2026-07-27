@@ -8,3 +8,6 @@ ADD the DATA by krish repo
 
 ## JULY 22 : 00:15
 ADD the config setup
+
+## JULY 27: 19:17
+ADD the embedding model
