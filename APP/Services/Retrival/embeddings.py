@@ -89,10 +89,10 @@ def embed_query(query : str)->list[float]: # use for retrival
     _init()
     if _model_type=="gemini":
         return _active_model.embed_query(query)
-    return _active_model.encode([query][0]).tolist()
+    return _active_model.encode([query])[0].tolist()
 
 
-    return
+    
 
 def embed_text(text: list[str])-> list[list[float]]:
     """ Embed a list of text strings using the active embedding model. """

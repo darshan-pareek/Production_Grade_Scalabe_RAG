@@ -61,3 +61,8 @@ it has flashranker use in retrival for giving best context chunks
 
 ## APP\agents\graph.py
 connecting all the nodes and building a graph 
+
+
+## APP\main.py
+FASTAPI main file with 2 router oe for see the graph and another for runnig complete pipeline
+/graph and /query

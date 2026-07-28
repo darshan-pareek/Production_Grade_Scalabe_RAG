@@ -24,3 +24,9 @@ Define agent state
 ## JULY 28 : 18:48
 Created the whole RAG pipeline
 
+## JULY 29 : 00:24
+Create the fastapi endpoints
+facing issue for dimension conflit of query and embedding in vector db
+
+
+

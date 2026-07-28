@@ -1,14 +1,14 @@
 import logfire
 from qdrant_client import QdrantClient
 from qdrant_client.http import models
-from APP.config import setting
+from APP.config import Setting
 from APP.Services.Retrival.embeddings import embed_query
 
 
 # Initialize Qdrant Client
 client = QdrantClient(
-    url=setting.QDRANT_URL,
-    api_key=setting.QDRANT_API_KEY
+    url=Setting.QDRANT_URL,
+    api_key=Setting.QDRANT_API_KEY
 )
 
 def search_enterprise_knowledge(query: str, limit: int = 8):
@@ -19,9 +19,11 @@ def search_enterprise_knowledge(query: str, limit: int = 8):
     try:
         query_vector = embed_query(query)
 
+        logfire.info(f"the length of query_vector is {len(query_vector)}")
+
         # Using query_points - the modern standard for Qdrant
         response = client.query_points(
-            collection_name=setting.QDRANT_COLLECTION,
+            collection_name=Setting.QDRANT_COLLECTION,
             query=query_vector,
             limit=limit,
             with_payload=True # JSON
