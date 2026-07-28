@@ -7,4 +7,4 @@ class AgentState(TypedDict):
     documents : List[str]
     plan : List[str]  # where to go next either techinal query(rag) or converstion query.
     status : str 
-    final_ans:str 
+    final_answer:str 
