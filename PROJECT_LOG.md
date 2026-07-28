@@ -17,3 +17,10 @@ ADD the chunker
 
 ## JULY 28 : 01:15
 Created the Complete injection pipeline
+
+## JULY 28 : 12:30
+Define agent state
+
+## JULY 28 : 18:48
+Created the whole RAG pipeline
+

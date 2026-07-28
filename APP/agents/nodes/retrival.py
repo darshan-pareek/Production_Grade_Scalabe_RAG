@@ -1,3 +1,6 @@
+# This node work only when the query is technical and we need to retrive info from vector db
+
+
 import logfire
 from APP.agents.state import AgentState
 from APP.Services.Retrival.qdrant_service import search_enterprise_knowledge

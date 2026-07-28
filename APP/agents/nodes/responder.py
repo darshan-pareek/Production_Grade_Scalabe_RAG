@@ -6,7 +6,7 @@ import logfire
 llm=ChatGroq(api_key=setting.GROQ_API_KEY,model=setting.GROQ_MODEL,temperature=0.2)
 
 
-def response_node(state :AgentState):
+def generate_node(state :AgentState):
     """Synthesizes a response using both Documentation Context AND Conversation History."""
 
     query=state["current_query"]
