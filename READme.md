@@ -47,3 +47,10 @@ setup  the qdrant client ie vector db
 2. process file =>   parse -> chunk -> save_laclly -> embedd ->  index in Qdrant
 3. process directory => to load the folders
 4. run universal injection => for cli running the file
+
+
+## APP\agents\state.py
+The langgraph agent state
+
+## APP\agents\nodes
+3 nodes planner , responder and retrival 
