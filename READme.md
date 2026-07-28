@@ -54,3 +54,8 @@ The langgraph agent state
 
 ## APP\agents\nodes
 3 nodes planner , responder and retrival 
+
+
+## APP\Services\Retrival\ranking_service.py
+it has flashranker use in retrival for giving best context chunks
+
