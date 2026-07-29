@@ -9,12 +9,18 @@ logfire.configure(token=os.getenv("Logfire Token"))
 from fastapi import FastAPI , Response
 
 from APP.agents.graph import rag_agent
+from APP.Guardrails.rails import initialize_rails ,guard
 
 from pydantic import BaseModel
 from typing import Optional
 
 # intialize fastapi
 app = FastAPI(title="Enterprice RAG SYstem")
+
+
+@app.on_event("startup")
+def startup_event():
+    initialize_rails()
 
 class QueryRequest(BaseModel):
     q: str
@@ -57,6 +63,28 @@ def query(request:QueryRequest):
     config= {"configurable" : {"thread_id": thread_id}}
 
     try:
+
+        # gate 1: nemo guardrails-block off topic jailbreak and handle dialog
+        rail_fired,rail_response=guard(q)
+        if rail_fired:
+            logfire.info("request block by guardrails | thread={thread_id}")
+            return {
+                "question": q,
+                "answer": rail_response,
+                "thought_process": ["Intent: Guardrails Fired", "Retrieval: Skipped"],
+                "status": "Blocked by guardrails.",
+                "sources": []
+            }
+
+
+        #gateway 2 langraph pipeline
+
+
+
+        
+
+
+
         final_output=rag_agent.invoke(intial_state,config=config)
 
         return {
