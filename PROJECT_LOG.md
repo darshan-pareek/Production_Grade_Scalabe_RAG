@@ -28,5 +28,9 @@ Created the whole RAG pipeline
 Create the fastapi endpoints
 facing issue for dimension conflit of query and embedding in vector db
 
+## JULY 29 : 01:20
+Created the streamlit ui
 
+## JULY 29 : 20:56
+Added the Guardrails 
 
