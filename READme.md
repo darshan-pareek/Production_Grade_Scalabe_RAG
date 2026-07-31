@@ -83,3 +83,16 @@ In planner.py => we change the llm before  ChatGroq we shift to
 llm=get_langchain_llm(feature="planner")
 
 In responder.py => no langchain use directly using portkey client so that we can get the caches.
+ie Exposes response headers → can read x-portkey-cache-status
+
+
+
+## eval
+Contain 6 files 
+1. golden_dataset.json => storing the golden dataset here for kubernetes
+2. pipeline.py => first step of evalution data generation ie creating a dataset of ip actual op generated op retrive text
+3. metrics.py => immplement ragas metrics for evaluation
+4. guadrails_eval.py => for guadrails eval using math formulas for calculation
+5. data_parser.py => for parsing the data to get retrive chunks
+6. app.py => ui of the eval pipeline
+

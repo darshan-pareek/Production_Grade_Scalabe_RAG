@@ -40,3 +40,6 @@ Added the Gateway
 
 ## JULY 31 : 20.30
 Update the UI
+
+## August 1 : 01:25
+created the evaluation pipeline
