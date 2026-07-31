@@ -27,7 +27,17 @@ def _probe_gemini(): # health func check if gemini able to convert embedidng by 
         model.embed_query("probability") # giving single word to check the emedding working or not
         # embed_query take single word
         logfire.info("embedding model is redy to use")
-        return model
+
+
+
+
+        #return model
+        # here making change just so it goes to sentence transformer not gemni when user give query
+        return None
+
+
+
+    
     except Exception as e:
         logfire.warning("gimini failed use sentence transformer  fallback")
         return None
@@ -46,7 +56,7 @@ def _init():
         return 
 
     gemini=_probe_gemini()
-    if gemini:
+    if gemini :
         _active_model=gemini
         _model_type="gemini"
     else:
