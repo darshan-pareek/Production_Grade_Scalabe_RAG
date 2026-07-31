@@ -37,3 +37,6 @@ Added the Guardrails
 
 ## JULY 30 : 16:57
 Added the Gateway
+
+## JULY 31 : 20.30
+Update the UI
