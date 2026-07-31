@@ -34,3 +34,6 @@ Created the streamlit ui
 ## JULY 29 : 20:56
 Added the Guardrails 
 
+
+## JULY 30 : 16:57
+Added the Gateway

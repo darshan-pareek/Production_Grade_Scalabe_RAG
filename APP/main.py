@@ -18,7 +18,7 @@ from typing import Optional
 app = FastAPI(title="Enterprice RAG SYstem")
 
 
-@app.on_event("startup")
+@app.on_event("startup")  # the moment app started it hit the guardrails
 def startup_event():
     initialize_rails()
 

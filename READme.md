@@ -66,3 +66,20 @@ connecting all the nodes and building a graph
 ## APP\main.py
 FASTAPI main file with 2 router oe for see the graph and another for runnig complete pipeline
 /graph and /query
+
+## ui\app.py
+Streamlit ui where fastapi is backend server where user can access the query route
+
+## APP\Guardrails
+3 files 
+init 
+colang_rule => help to prevent from jailbreak , sensitive topi and ip guard
+
+
+## APP\agents\nodes
+update the nodes to make them compatible with portkey
+
+In planner.py => we change the llm before  ChatGroq we shift to 
+llm=get_langchain_llm(feature="planner")
+
+In responder.py => no langchain use directly using portkey client so that we can get the caches.
