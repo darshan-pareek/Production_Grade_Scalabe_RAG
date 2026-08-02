@@ -96,3 +96,7 @@ Contain 6 files
 5. data_parser.py => for parsing the data to get retrive chunks
 6. app.py => ui of the eval pipeline
 
+
+## Now we are ready for the deployment 
+Need to do some changes in the pipeline to make it deployable 
+like using jeena embeddings and many more things 
